@@ -1,0 +1,44 @@
+{
+    "name": "rpiras/laravel-trustpilot",
+    "description": "Laravel PHP library for Trustpilot's API",
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": "^7.1.3|^8.0",
+        "illuminate/support": "^6.0|^7.0|^8.0|^9.0",
+        "illuminate/contracts": "^6.0|^7.0|^8.0|^9.0",
+        "guzzlehttp/guzzle": "~6.0|^7.0",
+        "nesbot/carbon": "^2.31.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "5.1.*",
+        "phpunit/phpunit": "^8.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "IGD\\Trustpilot\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "IGD\\Trustpilot\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "IGD\\Trustpilot\\Providers\\TrustpilotServiceProvider"
+            ],
+            "aliases": {
+                "Trustpilot": "IGD\\Trustpilot\\Facades\\Trustpilot"
+            }
+        }
+    }
+}
