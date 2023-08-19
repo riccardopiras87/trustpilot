@@ -15,7 +15,7 @@ class Trustpilot
      * @param string|null $businessUnitId
      * @return \IGD\Trustpilot\API\BusinessUnit\BusinessUnit
      */
-    public function businessUnit(?string $businessUnitId = null): BusinessUnit
+    public static function businessUnit(?string $businessUnitId = null): BusinessUnit
     {
         return new BusinessUnit($businessUnitId);
     }
