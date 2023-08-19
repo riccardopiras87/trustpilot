@@ -21,7 +21,7 @@ class BusinessUnit extends Resource
      *
      * @param null|string $businessUnitId
      */
-    public static function __construct(?string $businessUnitId = null)
+    public function __construct(?string $businessUnitId = null)
     {
         $this->id = $businessUnitId ?? config('trustpilot.unit_id');
     }
